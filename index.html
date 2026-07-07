@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Temperature Converter</title>
+</head>
+
+<body
+    class="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-950 via-slate-900 to-gray-900 p-4">
+
+    <div class="w-full max-w-md bg-slate-900 border border-slate-700 rounded-3xl shadow-2xl p-6">
+
+        <!-- Heading -->
+        <div class="text-center mb-5">
+
+            <div
+                class="w-14 h-14 mx-auto rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center text-2xl mb-3">
+                🌡️
+            </div>
+
+            <h1 class="text-2xl font-bold text-white">
+                Temperature Converter
+            </h1>
+
+            <p class="text-slate-400 text-sm mt-1">
+                Convert Celsius & Fahrenheit
+            </p>
+
+        </div>
+
+        <!-- Input -->
+        <div class="mb-4">
+
+            <label class="block text-slate-300 mb-2 text-sm font-medium">
+                Temperature
+            </label>
+            <!-- Error Message -->
+
+            <input id="temp-value" type="number" placeholder="Enter temperature"
+                class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-2.5 text-white placeholder:text-slate-500 outline-none focus:ring-2 focus:ring-cyan-500">
+
+        </div>
+
+        <!-- Conversion Type -->
+        <div class="mb-5">
+
+            <label class="block text-slate-300 text-sm mb-2 font-medium">
+                Conversion Type
+            </label>
+
+            <select id="conv-type"
+                class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-2.5 text-white outline-none focus:ring-2 focus:ring-cyan-500">
+
+                <option value="ctof" class="text-black">
+                    Celsius → Fahrenheit
+                </option>
+
+                <option value="ftoc" class="text-black">
+                    Fahrenheit → Celsius
+                </option>
+
+            </select>
+
+        </div>
+
+        <!-- Result -->
+        <div class="border-y border-slate-700 py-4 mb-5">
+
+            <p class="text-center text-slate-400 text-sm">
+                Result
+            </p>
+
+            <h2 id="result" class="text-center text-3xl font-bold text-cyan-400 mt-1">
+                -- °F
+            </h2>
+
+        </div>
+
+        <!-- Buttons -->
+        <div class="flex gap-3">
+
+            <button id="convert"
+                class="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 py-2.5 rounded-xl text-white font-semibold hover:scale-105 transition duration-300">
+                Convert
+            </button>
+
+            <button id="reset"
+                class="flex-1 bg-slate-700 hover:bg-red-600 py-2.5 rounded-xl text-white font-semibold transition duration-300">
+                Reset
+            </button>
+
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
